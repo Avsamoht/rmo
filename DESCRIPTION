@@ -1,0 +1,19 @@
+Package: rmo
+Title: data store for air quality measurements
+Version: 0.0.0.9000
+Authors@R: person("Thomas", "von Allmen", email = "thomas.vonallmen@zuerich.ch", role = c("aut", "cre"))
+Description: reads exports from AIRMO in CSV or DAT format and saves the data as rds file. Provides utility 
+  function to convert the data into a compatible format for openair.
+Depends: R (>= 3.4.3)
+Imports:
+  dplyr (>= 0.7.1),
+  tidyr (>= 0.7.2),
+  purrr (>= 0.2.4),
+  lubridate (>= 1.7.1)
+Suggests:
+  openair
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/Avsamoht/rmo
+RoxygenNote: 6.0.1

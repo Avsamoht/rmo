@@ -8,10 +8,15 @@
 #' @return merged dataframe
 #' @export
 merge_rmo_longformat <- function(x, y) {
-  dfn <- full_join(y, x, by = c("startzeit", "airmo_kurzname", "parameter", "zeitfenster", "einheit"), suffix = c("", ".old"))
+  # for some reason, factors can be coerced to character vectors
+  suppressWarnings(
+    dfn <- full_join(y, x, by = c("startzeit", "airmo_kurzname", "parameter", "zeitfenster", "einheit"),
+                     suffix = c("", ".old"))
+  )
   dfn[["value"]][is.na(dfn["value"])] <- dfn[["value.old"]][is.na(dfn["value"])]
   dfn <- select(dfn, -value.old)
-  arrange(dfn, startzeit)
+  dfn <- arrange(dfn, startzeit)
+  mutate_if(dfn, is.character, as.factor)
 }
 
 

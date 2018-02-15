@@ -10,6 +10,8 @@ read_airmo_csv(fn, encoding = "cp1252", tz = "Etc/GMT-1",
 \arguments{
 \item{fn}{CSV file name, can be relative to current directory or absolut}
 
+\item{encoding}{CSV file encoding. Default "cp1252"}
+
 \item{tz}{time zone of date field. Be carefull Etc/GMT + == -. Default "Etc/GMT-1"}
 
 \item{time_shift}{a lubridate period to add to the time. Default NULL}

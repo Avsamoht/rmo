@@ -16,4 +16,5 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/Avsamoht/rmo
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.0.1

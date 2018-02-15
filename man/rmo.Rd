@@ -4,7 +4,7 @@
 \name{rmo}
 \alias{rmo}
 \alias{rmo-package}
-\title{rmo: data store for air quality measurements}
+\title{rmo: rmo - data store for air quality measurements}
 \description{
 reads exports from AIRMO in CSV or DAT format and saves the data as rds file. Provides utility
 function to convert the data into a compatible format for openair.

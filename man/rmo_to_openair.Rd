@@ -27,10 +27,12 @@ will duplicate data for shared start times.
 \details{
 all parameter names will be converted to lower case. Following parameters will be automatically
 renamed to match the openair conventions:
-* startzeit => date
-* airmo_kurzname => site
-* WVv => ws
-* PM2.5 => pm25
+\itemize{
+\item startzeit => date
+\item airmo_kurzname => site
+\item WVv => ws
+\item PM2.5 => pm25
+}
 }
 \examples{
 \dontrun{

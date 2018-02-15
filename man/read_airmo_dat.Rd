@@ -4,14 +4,27 @@
 \alias{read_airmo_dat}
 \title{Reads an AIRMO Export in DAT Format}
 \usage{
-read_airmo_dat(fn)
+read_airmo_dat(fn, encoding = "cp1252", tz = "Etc/GMT-1",
+  time_shift = NULL)
 }
 \arguments{
 \item{fn}{DAT file name, can be relative to current directory or absolut}
+
+\item{encoding}{DAT file encoding. Default "cp1252"}
+
+\item{tz}{time zone of date field. Be carefull Etc/GMT + == -. Default "Etc/GMT-1"}
+
+\item{time_shift}{a lubridate period to add to the time. Default NULL}
 }
 \value{
 dataframe in rmo long format
 }
 \description{
 Reads the data from a AIRMO DAT file and returns it as a dataframe in rmo long format
+}
+\seealso{
+\itemize{
+\item \code{\link[lubridate]{period}} - Create or parse period objects
+\item \code{\link[base]{timezones}} - Information about time zones in R
+}
 }

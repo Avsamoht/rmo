@@ -13,6 +13,6 @@ rds_save_data(df, base_path = "rds")
 }
 \description{
 At the moment the design for the store is to split the data in year, zeitfenster and site chunks
- and save every chunk as rds file. This functions automatically splits the data in the chunks and
- merges the new data into existings rds files.
+and save every chunk as rds file. This functions automatically splits the data in the chunks and
+merges the new data into existings rds files.
 }
